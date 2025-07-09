@@ -69,19 +69,20 @@ This application was built entirely using **vibe coding** - a development approa
 
 ## Current UI
 
-![DailyRays UI Screenshot](screenshots/ui_screenshot.svg)
+![DailyRays UI Screenshot](screenshots/ui_screeScreenshot 2025-07-09 214957.png)
 
-This is the UI I'll make more better in future. It was just a first attempt at creating the interface for tracking daily activities. The current interface shows:
-
-- A clean blue header with app title and refresh button
-- Entry cards with date/time stamps
+The current interface features:
+- A clean blue header with the app title and a three-dots menu for "Refresh" and "To-Do List"
+- Entry cards with date/time in dd-MM-yyyy and 12-hour format
 - Four tracking categories with emoji indicators:
   - 💪 Exercise Log
   - 🧠 Skill Development
   - 📚 Extra Learning
   - ✍️ Daily Journal
+- User content is indented, italic, and sits on a subtle rounded background for clarity
 - Floating action button (+) for adding new entries
 - Simple delete functionality for managing entries
+- Dedicated To-Do List page accessible from the menu
 
 ## Future Enhancements
 
