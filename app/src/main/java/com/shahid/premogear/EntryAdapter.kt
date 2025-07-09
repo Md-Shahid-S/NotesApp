@@ -8,6 +8,8 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.shahid.premogear.data.Entry
 import com.shahid.premogear.databinding.ItemEntryBinding
+import java.text.SimpleDateFormat
+import java.util.Locale
 
 class EntryAdapter(
     private val onDelete: ((Entry) -> Unit)? = null
@@ -26,7 +28,23 @@ class EntryAdapter(
         private val onDelete: ((Entry) -> Unit)?
     ) : RecyclerView.ViewHolder(binding.root) {
         fun bind(entry: Entry) {
-            binding.tvDate.text = "${entry.date}  ${entry.time}"
+            // Format date to dd-MM-yyyy
+            val formattedDate = try {
+                val inDateFormat = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
+                val outDateFormat = SimpleDateFormat("dd-MM-yyyy", Locale.getDefault())
+                outDateFormat.format(inDateFormat.parse(entry.date) ?: entry.date)
+            } catch (e: Exception) {
+                entry.date
+            }
+            // Format time to 12-hour with AM/PM
+            val formattedTime = try {
+                val inFormat = SimpleDateFormat("HH:mm", Locale.getDefault())
+                val outFormat = SimpleDateFormat("hh:mm a", Locale.getDefault())
+                outFormat.format(inFormat.parse(entry.time) ?: entry.time)
+            } catch (e: Exception) {
+                entry.time
+            }
+            binding.tvDate.text = "$formattedDate  $formattedTime"
             binding.tvExercise.text = entry.exerciseLog
             binding.tvSkill.text = entry.skillLog
             binding.tvExtra.text = entry.extraLearningLog

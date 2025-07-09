@@ -4,10 +4,13 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.shahid.premogear.data.TodoItem
+import com.shahid.premogear.data.TodoItemDao
 
-@Database(entities = [Entry::class], version = 1, exportSchema = false)
+@Database(entities = [Entry::class, TodoItem::class], version = 3, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun entryDao(): EntryDao
+    abstract fun todoItemDao(): TodoItemDao
 
     companion object {
         @Volatile
@@ -19,7 +22,7 @@ abstract class AppDatabase : RoomDatabase() {
                     context.applicationContext,
                     AppDatabase::class.java,
                     "daily_rays_db"
-                ).build()
+                ).fallbackToDestructiveMigration().build()
                 INSTANCE = instance
                 instance
             }

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_refresh"
+        android:title="Refresh"
+        android:icon="@android:drawable/ic_menu_rotate"
+        android:showAsAction="never" />
+    <item
+        android:id="@+id/action_todo_list"
+        android:title="To-Do List"
+        android:icon="@android:drawable/ic_menu_agenda"
+        android:showAsAction="never" />
+</menu> 

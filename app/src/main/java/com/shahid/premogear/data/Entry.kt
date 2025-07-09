@@ -11,5 +11,6 @@ data class Entry(
     val exerciseLog: String,
     val skillLog: String,
     val extraLearningLog: String,
-    val journalEntry: String
+    val journalEntry: String,
+    val todoList: String = ""
 ) 

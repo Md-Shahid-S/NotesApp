@@ -18,6 +18,9 @@ import com.shahid.premogear.data.Entry
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
+import android.content.Intent
+import android.view.Menu
+import android.view.MenuItem
 
 class ExplorerActivity : AppCompatActivity() {
     private lateinit var binding: ActivityExplorerBinding
@@ -27,6 +30,8 @@ class ExplorerActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityExplorerBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setSupportActionBar(binding.toolbar)
 
         adapter = EntryAdapter { entry ->
             lifecycleScope.launch {
@@ -39,11 +44,29 @@ class ExplorerActivity : AppCompatActivity() {
         binding.rvEntries.layoutManager = LinearLayoutManager(this)
         binding.rvEntries.adapter = adapter
 
-        binding.btnRefresh.setOnClickListener { loadEntries() }
         binding.fabAddEntry.setOnClickListener {
             showAddEntryDialog()
         }
         loadEntries()
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_explorer, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.action_refresh -> {
+                loadEntries()
+                true
+            }
+            R.id.action_todo_list -> {
+                startActivity(Intent(this, TodoListActivity::class.java))
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
     }
 
     private fun loadEntries() {
@@ -78,6 +101,7 @@ class ExplorerActivity : AppCompatActivity() {
         val etSkill = dialogView.findViewById<EditText>(R.id.etSkill)
         val etExtra = dialogView.findViewById<EditText>(R.id.etExtra)
         val etJournal = dialogView.findViewById<EditText>(R.id.etJournal)
+        // Removed etTodoList
 
         AlertDialog.Builder(this)
             .setTitle("Add Entry")
@@ -85,7 +109,7 @@ class ExplorerActivity : AppCompatActivity() {
             .setPositiveButton("Add") { _, _ ->
                 val now = Date()
                 val date = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(now)
-                val time = SimpleDateFormat("HH:mm", Locale.getDefault()).format(now)
+                val time = SimpleDateFormat("hh:mm a", Locale.getDefault()).format(now)
                 val entry = Entry(
                     date = date,
                     time = time,
@@ -93,6 +117,7 @@ class ExplorerActivity : AppCompatActivity() {
                     skillLog = etSkill.text.toString(),
                     extraLearningLog = etExtra.text.toString(),
                     journalEntry = etJournal.text.toString()
+                    // Removed todoList
                 )
                 lifecycleScope.launch {
                     withContext(Dispatchers.IO) {

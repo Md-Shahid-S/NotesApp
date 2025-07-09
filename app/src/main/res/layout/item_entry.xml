@@ -48,14 +48,20 @@
                 android:text="💪 Exercise Log"
                 android:textStyle="bold"
                 android:textColor="@color/primary_text"
-                android:textSize="14sp" />
+                android:textSize="15sp"
+                android:layout_marginTop="8dp" />
             <TextView
                 android:id="@+id/tvExercise"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/secondary_text"
-                android:textSize="14sp"
-                android:layout_marginBottom="8dp" />
+                android:textSize="15sp"
+                android:background="@drawable/entry_content_bg"
+                android:padding="8dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="2dp"
+                android:textStyle="italic" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -63,14 +69,20 @@
                 android:text="🧠 Skill Development"
                 android:textStyle="bold"
                 android:textColor="@color/primary_text"
-                android:textSize="14sp" />
+                android:textSize="15sp"
+                android:layout_marginTop="8dp" />
             <TextView
                 android:id="@+id/tvSkill"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/secondary_text"
-                android:textSize="14sp"
-                android:layout_marginBottom="8dp" />
+                android:textSize="15sp"
+                android:background="@drawable/entry_content_bg"
+                android:padding="8dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="2dp"
+                android:textStyle="italic" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -78,14 +90,20 @@
                 android:text="📚 Extra Learning"
                 android:textStyle="bold"
                 android:textColor="@color/primary_text"
-                android:textSize="14sp" />
+                android:textSize="15sp"
+                android:layout_marginTop="8dp" />
             <TextView
                 android:id="@+id/tvExtra"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/secondary_text"
-                android:textSize="14sp"
-                android:layout_marginBottom="8dp" />
+                android:textSize="15sp"
+                android:background="@drawable/entry_content_bg"
+                android:padding="8dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="2dp"
+                android:textStyle="italic" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -93,14 +111,20 @@
                 android:text="✍️ Daily Journal"
                 android:textStyle="bold"
                 android:textColor="@color/primary_text"
-                android:textSize="14sp" />
+                android:textSize="15sp"
+                android:layout_marginTop="8dp" />
             <TextView
                 android:id="@+id/tvJournal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/secondary_text"
-                android:textSize="14sp"
-                android:layout_marginBottom="4dp" />
+                android:textSize="15sp"
+                android:background="@drawable/entry_content_bg"
+                android:padding="8dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="2dp"
+                android:textStyle="italic" />
 
         </LinearLayout>
     </RelativeLayout>
