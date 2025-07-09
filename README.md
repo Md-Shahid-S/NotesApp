@@ -97,4 +97,3 @@ This is the UI I'll make more better in future. It was just a first attempt at c
 For any queries or suggestions, please contact:
 - Name: Mohammed Shahid S
 - Email: shahidsmohammed47@gmail.com
-- Mobile: +91 9344087735
