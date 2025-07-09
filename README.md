@@ -69,7 +69,7 @@ This application was built entirely using **vibe coding** - a development approa
 
 ## Current UI
 
-![DailyRays UI Screenshot](screenshots/ui_screeScreenshot.png)
+![DailyRays UI Screenshot](screenshots/Screenshot.png)
 
 The current interface features:
 - A clean blue header with the app title and a three-dots menu for "Refresh" and "To-Do List"
