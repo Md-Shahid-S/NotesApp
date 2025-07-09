@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">DailyRays</string>
+    <string name="hint_exercise">e.g. 25 pushups, 15 min walk</string>
+    <string name="hint_skill">e.g. Practiced Python functions</string>
+    <string name="hint_extra">e.g. Studied ML chapter, read 5 pages</string>
+    <string name="hint_journal">Line 1\nLine 2\nLine 3\nLine 4\nLine 5</string>
+    <string name="save_button">Save Today’s Entry</string>
+    <string name="toast_saved">🌞 Your efforts are saved!</string>
+</resources>

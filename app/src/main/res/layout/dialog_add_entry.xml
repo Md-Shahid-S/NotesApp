@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <EditText
+        android:id="@+id/etExercise"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Exercise Log" />
+
+    <EditText
+        android:id="@+id/etSkill"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Skill Development" />
+
+    <EditText
+        android:id="@+id/etExtra"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Extra Learning" />
+
+    <EditText
+        android:id="@+id/etJournal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Daily Journal" />
+
+</LinearLayout> 
